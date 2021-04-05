@@ -74,6 +74,7 @@ exports.plugin = fastify_plugin_1.default(function (instance, options, done) {
     });
     instance.addHook('onReady', (done) => {
         printRoutes(routes, useColors);
+        console.log(`Total: ${routes.length}`);
         done();
     });
     done();
